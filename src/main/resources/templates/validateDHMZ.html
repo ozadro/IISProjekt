@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DHMZ</title>
+</head>
+<body>
+<form method="post"  th:action="@{/xsd/validateDHMZ.html}">
+  <label>City: </label>
+  <input type="text" name="city">
+  <button type="submit">Get Temp</button>
+</form>
+<p th:text="${Temp}"></p>
+<p th:text="${Error}"></p>
+</body>
+</html>

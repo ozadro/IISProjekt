@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:integer" />
+              <xs:element name="season" type="xs:string" />
+              <xs:element name="week" type="xs:integer" />
+              <xs:element name="season_type" type="xs:string" />
+              <xs:element name="start_date" type="xs:string" />
+              <xs:element name="start_time_tbd" type="xs:string" />
+              <xs:element name="completed" type="xs:string" />
+              <xs:element name="neutral_site" type="xs:string" />
+              <xs:element name="conference_game" type="xs:string" />
+              <xs:element name="attendance" type="xs:string" />
+              <xs:element name="venue_id" type="xs:integer" />
+              <xs:element name="venue" type="xs:string" />
+              <xs:element name="home_id" type="xs:integer" />
+              <xs:element name="home_team" type="xs:string" />
+              <xs:element name="home_conference" type="xs:string" />
+              <xs:element name="home_division" type="xs:string" />
+              <xs:element name="home_points" type="xs:integer" />
+              <xs:element name="home_post_win_prob" type="xs:string" />
+              <xs:element name="home_pregame_elo" type="xs:string" />
+              <xs:element name="home_postgame_elo" type="xs:string" />
+              <xs:element name="away_id" type="xs:integer" />
+              <xs:element name="away_team" type="xs:string" />
+              <xs:element name="away_conference" type="xs:string" />
+              <xs:element name="away_division" type="xs:string" />
+              <xs:element name="away_points" type="xs:integer" />
+              <xs:element name="away_post_win_prob" type="xs:string" />
+              <xs:element name="away_pregame_elo" type="xs:string" />
+              <xs:element name="away_postgame_elo" type="xs:string" />
+              <xs:element name="excitement_index" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

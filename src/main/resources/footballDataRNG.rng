@@ -1,0 +1,108 @@
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" ns="" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <rng:start combine="choice">
+<rng:ref name="root"/>
+</rng:start>
+<rng:define name="root">
+<rng:element name="root">
+    
+      
+        <rng:oneOrMore>
+<rng:element name="row">
+          
+            
+              <rng:element name="id">
+<rng:data type="integer"/>
+</rng:element>
+              <rng:element name="season">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="week">
+<rng:data type="unsignedByte"/>
+</rng:element>
+              <rng:element name="season_type">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="start_date">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="start_time_tbd">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="completed">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="neutral_site">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="conference_game">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="attendance">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="venue_id">
+<rng:data type="integer"/>
+</rng:element>
+              <rng:element name="venue">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="home_id">
+<rng:data type="integer"/>
+</rng:element>
+              <rng:element name="home_team">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="home_conference">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="home_division">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="home_points">
+<rng:data type="integer"/>
+</rng:element>
+              <rng:element name="home_post_win_prob">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="home_pregame_elo">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="home_postgame_elo">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="away_id">
+<rng:data type="integer"/>
+</rng:element>
+              <rng:element name="away_team">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="away_conference">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="away_division">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="away_points">
+<rng:data type="integer"/>
+</rng:element>
+              <rng:element name="away_post_win_prob">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="away_pregame_elo">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="away_postgame_elo">
+<rng:data type="string"/>
+</rng:element>
+              <rng:element name="excitement_index">
+<rng:data type="string"/>
+</rng:element>
+            
+          
+        </rng:element>
+</rng:oneOrMore>
+      
+    
+  </rng:element>
+</rng:define>
+</rng:grammar>
