@@ -13,8 +13,8 @@
     <button type="submit">Validate xml with XSD</button>
 </form>
 <p th:text="${XSDmessage}"></p>
-</br>
-</br>
+<br/>
+<br/>
 <form method="post"  th:action="@{/xsd/validateRNG.html}">
     <button type="submit">Validate xml with RNG</button>
 </form>
@@ -22,10 +22,11 @@
 
 <form method="post"  th:action="@{/xsd/validateSOAP.html}">
     <label>xQuery query: </label>
-    <input type="text" name="xQuery">
+    <input type="text" name="xQuery"/>
     <button type="submit">Validate generated file with SOAP</button>
 </form>
 <p th:text="${Validated}"></p>
 <p th:text="${Invalid}"></p>
+<p th:text="${Result}"></p>
 </body>
 </html>

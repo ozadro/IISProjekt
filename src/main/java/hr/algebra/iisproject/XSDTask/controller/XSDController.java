@@ -124,7 +124,7 @@ public class XSDController {
     @PostMapping("/validateSOAP.html")
     public String validateSoap(@RequestParam("xQuery") String xQuery, Model model){
         try{
-            soapValidator.generateXmlFromXQuery(xQuery);
+            model.addAttribute("Result",soapValidator.generateXmlFromXQuery(xQuery));
             soapValidator.validateGeneratedXML(soapFile);
             model.addAttribute("Validated","Valid");
             return "xsdValidate";
