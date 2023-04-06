@@ -1,41 +1,35 @@
 package hr.algebra.iisproject.XSDTask.controller;
 
-import com.fasterxml.jackson.databind.annotation.JsonAppend;
-import hr.algebra.iisproject.XSDTask.model.Row;
-import hr.algebra.iisproject.XSDTask.repository.RowRepositoryImpl;
 import hr.algebra.iisproject.XSDTask.service.RPCService;
 import hr.algebra.iisproject.XSDTask.validator.RNGValidator;
 import hr.algebra.iisproject.XSDTask.validator.SoapValidator;
 import hr.algebra.iisproject.XSDTask.validator.XsdValidator;
+import jakarta.servlet.http.HttpSession;
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.server.PropertyHandlerMapping;
 import org.apache.xmlrpc.server.XmlRpcServer;
-import org.apache.xmlrpc.server.XmlRpcServerConfig;
-import org.apache.xmlrpc.server.XmlRpcServerConfigImpl;
 import org.apache.xmlrpc.webserver.WebServer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.ResourceUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.support.SessionStatus;
 import org.xml.sax.SAXException;
 
-import javax.swing.JFileChooser;
-import javax.swing.plaf.basic.BasicSplitPaneUI;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.jar.JarFile;
+
 
 
 @Controller
 @RequestMapping("/xsd")
 public class XSDController {
 
-//    private RowRepositoryImpl rowRepositoryImpl;
-//
-//    public XSDController(RowRepositoryImpl rowRepositoryImpl) {
-//        this.rowRepositoryImpl = rowRepositoryImpl;
-//    }
+
 
    private String soapFile = "SoapFile.xml";
    private File xml;
@@ -136,6 +130,13 @@ public class XSDController {
 
     }
 
+
+    @GetMapping("/cleanSession.html")
+    public String cleanSession(SessionStatus sessionStatus, HttpSession session) {
+        session.invalidate();
+        sessionStatus.setComplete();
+        return "redirect:/xsd/login.html";
+    }
 
 
 
